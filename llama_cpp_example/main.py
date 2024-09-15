@@ -4,7 +4,8 @@ def get_llm():
     llm = Llama.from_pretrained(
         repo_id="bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
         filename="*Q8_0.gguf",
-        verbose=True
+        verbose=True,
+        n_gpu_layers=-1,
     )
 
     return llm
