@@ -13,7 +13,7 @@ def get_llm():
 def run_example():
     llm = get_llm()
     output = llm(
-        "Q: Write a simple hello world example in C++ A: ", # Prompt
+        "Q: Write a simple hello world example in C++. Only code is required. A: ", # Prompt
         max_tokens=None, # Generate up to 32 tokens, set to None to generate up to the end of the context window
         stop=["Q:", "\n"], # Stop generating just before the model would generate a new question
         echo=True # Echo the prompt back in the output
