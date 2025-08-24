@@ -21,7 +21,7 @@ def benchmark(device, size=20000, steps=10):
     print(f"Time per step: {(end - start) / steps:.4f} seconds")
 
 # CPU
-#benchmark(torch.device("cpu"))
+benchmark(torch.device("cpu"))
 
 # Apple GPU (MPS) if available
 if torch.backends.mps.is_available():
